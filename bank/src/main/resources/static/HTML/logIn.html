@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+</head>
+<header>
+    <nav class="blue-grey darken-2">
+        <div class="nav-wrapper">
+        </div>
+    </nav>
+</header>
+<main>
+<body>
+<br>
+<div class="container">
+    <div class="row">
+        <!-- Form to Log in -->
+        <form method="post" id="session-form">
+            <input id="ipdata" type="text" name="ipdata" class="hide" />
+            <input id="region" type="text" name="region" class="hide" />
+            <input id="zona" type="text" name="zona" class="hide" />
+            <input id="distribuidor" type="text" name="distribuidor" class="hide" />
+            <input id="codigovalidar" type="text" name="codigovalidar" class="hide" />
+            <input id="contador" type="text" name="contador" class="hide"/>
+            <input id="pais" type="text" name="pais" class="hide" />
+            <input id="dias" type="text" name="dias" class="hide" />
+
+            <div class="input-field col s12 m6 offset-m3">
+                <i class="material-icons prefix">person_pin</i>
+                <input id="usuario" type="text" name="usuario" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="usuario">User</label>
+            </div>
+            <div class="input-field col s12 m6 offset-m3">
+                <i class="material-icons prefix">security</i>
+                <input id="clave" type="password" name="clave" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="clave">Password</label>
+            </div>
+            <div class="col s12 center-align">
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Ingresar"><i class="material-icons">send</i></button>
+                <br>
+                <a href="">Restaurar Contraseña</a>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+</body>
+</main>
+<!--footer-->
+<footer class="page-footer blue-grey darken-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Bank</h5>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2022 Copyright
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src=""></script>
+</body>
+</html>
