@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
@@ -32,18 +33,18 @@
 
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">person_pin</i>
-                <input id="usuario" type="text" name="usuario" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
-                <label for="usuario">User</label>
+                <input id="user" type="text" name="user" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="user">User</label>
             </div>
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">security</i>
-                <input id="clave" type="password" name="clave" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
-                <label for="clave">Password</label>
+                <input id="pass" type="password" name="clave" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="pass">Password</label>
             </div>
             <div class="col s12 center-align">
-                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Ingresar"><i class="material-icons">send</i></button>
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Enter"><i class="material-icons">send</i></button>
                 <br>
-                <a href="">Restaurar Contraseña</a>
+                <a href="">Restore Password</a>
             </div>
         </form>
     </div>
@@ -72,6 +73,8 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<script type="text/javascript" src="../JS/init.js"></script>
 <script type="text/javascript" src=""></script>
 </body>
 </html>

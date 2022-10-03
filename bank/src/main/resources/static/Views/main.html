@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Dashboard - ' . $title . '</title>
+    <title>Dashboard - Main Page</title>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
         <link type="text/css" rel="stylesheet" href="../css/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Log In</title>
@@ -18,7 +19,7 @@
                 <i class="material-icons">menu</i>
             </a>
             <ul class="left left hide-on-med-and-down">
-                <li><a href="main.php"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="main.html"><i class="material-icons left">home</i>Home</a></li>
             </ul>
         </div>
     </nav>
@@ -35,14 +36,85 @@
                 <br>
             </div>
         <li>
-        <li><a href="#" onclick="openProfileDialog()"><i class="material-icons">face</i>Editar perfil</a></li>
-        <li><a href="#" onclick="openPasswordDialog()"><i class="material-icons">lock</i>Cambiar clave</a></li>
-        <li><a href="intentosusuario.php"><i class="material-icons left">gpp_maybe</i>Intentos Usuario</a></li>
-        <li><a href="historialsesion.php"><i class="material-icons left">verified_user</i>Historial de Sesiones</a></li>
+        <li><a href="#profile-modal" class="modal-trigger waves-effect waves-light btn"><i class="material-icons">face</i>Editar perfil</a></li>
+        <li><a href="#password-modal" class="modal-trigger waves-effect waves-light btn"><i class="material-icons">lock</i>Cambiar clave</a></li>
+<!--        <li><a href="intentosusuario.php"><i class="material-icons left">gpp_maybe</i>Intentos Usuario</a></li>-->
+<!--        <li><a href="historialsesion.php"><i class="material-icons left">verified_user</i>Historial de Sesiones</a></li>-->
         <div class="divider"></div>
         </li>
     </ul>
-</header>
+    <!-- Componente Modal para mostrar el formulario de editar perfil -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content center-align">
+            <h4></h4>
+            <!-- Título para la caja de dialogo -->
+            <h4 id="modal-titles" class="center-align"></h4>
+            <!-- Formulario para crear o actualizar un registro -->
+            <form method="post" id="profile-form">
+                <!-- Campo oculto para asignar el id del registro al momento de modificar -->
+                <input class="hide" type="number" id="id_usuario" name="id_usuario"/>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_box</i>
+                        <input id="nombre_usuario" type="text" name="nombre_usuario" class="validate"  required/>
+                        <label for="nombre_usuario">Nombre Usuario</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_box</i>
+                        <input id="apellido_usuario" type="text" name="apellido_usuario" class="validate"  required/>
+                        <label for="apellido_usuario">Apellido Usuario</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">place</i>
+                        <input type="text" id="direccion_usuario" name="direccion_usuario" maxlength="200" class="validate" required/>
+                        <label for="direccion_usuario">Dirección</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="correo_usuario" name="correo_usuario" maxlength="100" class="validate" required/>
+                        <label for="correo_usuario">Correo electrónico</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="alias_usuario" name="alias_usuario" maxlength="200" class="validate" required/>
+                        <label for="alias_usuario">Alias</label>
+                    </div>
+                    <div>
+                        <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons center-align">cancel</i></a>
+                        <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Componente Modal para mostrar el formulario de cambiar contraseña -->
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <h4 class="center-align">Cambiar contraseña</h4>
+            <form method="post" id="password-form">
+                <div class="row center-align">
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">security</i>
+                        <input id="clave_nueva_1" type="password" name="clave_nueva_1" class="validate" required/>
+                        <label for="clave_nueva_1">Clave</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">security</i>
+                        <input id="clave_nueva_2" type="password" name="clave_nueva_2" class="validate" required/>
+                        <label for="clave_nueva_2">Confirmar clave</label>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
+                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+   </header>
     <main>
 
 
@@ -70,6 +142,8 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<script type="text/javascript" src="../JS/init.js"></script>
 <script type="text/javascript" src=""></script>
  </body>
 </html>
