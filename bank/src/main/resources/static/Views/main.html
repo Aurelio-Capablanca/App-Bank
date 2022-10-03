@@ -20,26 +20,6 @@
             <ul class="left left hide-on-med-and-down">
                 <li><a href="main.php"><i class="material-icons left">home</i>Home</a></li>
             </ul>
-            <ul class="right right hide-on-med-and-down">
-                <li><a href="calendario.php"><i class="material-icons left">schedule</i>Agenda</a></li>
-                <li><a href="consultas.php"><i class="material-icons left">check</i>Consultas</a></li>
-                <!-- <li><a href="mantenimientos.php"><i class="material-icons left">desktop_mac</i>Mantenimientos</a></li> -->
-                <li><a href="pagos.php"><i class="material-icons left">assignment</i>Pagos</a></li>
-                <li><a href="procedimientos.php"><i class="material-icons left">health_and_safety</i>Procedimientos</a></li>
-                <li><a href="#" onclick="logOut()"><i class="material-icons left">highlight_off</i>Cerrar sesión</a></li>
-
-            </ul>
-        </div>
-        <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="usuarioss.php">Usuarios</a></li>
-                <li class="tab"><a href="expedientes.php">Expedientes</a></li>
-                <li class="tab"><a href="doctores.php">Doctores</a></li>
-                <li class="tab"><a href="pacientes.php">Pacientes</a></li>
-                <li class="tab"><a href="tratamientos.php">Tratamientos</a></li>
-                <li class="tab"><a href="causaConsulta.php">Causa Consultas</a></li>
-                <li class="tab"><a href="especialidad.php">Especialidades</a></li>
-            </ul>
         </div>
     </nav>
     <ul id="slide-out" class="sidenav">
@@ -49,8 +29,8 @@
                     <img src="../resources/img/fonfo12.jpg">
                 </div>
                 <a href="#user"><img class="circle" src="../resources/img/SmileDesign.jfif"></a>
-                <a href="#name"><span class="white-text name">Usuario:<b> ' . $_SESSION['aliasusuario'] . '</b></span></a>
-                <a href="#name"><span class="white-text name">Correo:<b> ' . $_SESSION['correousuario'] . '</b></span></a>
+                <a href="#name"><span class="white-text name">Usuario:<b> <!-- ' . $_SESSION['aliasusuario'] . '--></b></span></a>
+                <a href="#name"><span class="white-text name">Correo:<b> <!--' . $_SESSION['correousuario'] . '--></b></span></a>
                 <br>
                 <br>
             </div>
@@ -61,11 +41,6 @@
         <li><a href="historialsesion.php"><i class="material-icons left">verified_user</i>Historial de Sesiones</a></li>
         <div class="divider"></div>
         </li>
-        <li><a href="#"  onclick="logOut()"><i class="material-icons left">highlight_off</i>Cerrar sesión</a></li>
-        <li class="hide-on-large-only" ><a href="consultas.php"><i class="material-icons left">check</i>Consultas</a></li>
-        <!-- <li class="hide-on-large-only" ><a href="mantenimientos.php"><i class="material-icons left">desktop_mac</i>Mantenimientos</a></li> -->
-        <li class="hide-on-large-only" ><a href="pagos.php"><i class="material-icons left">assignment</i>Pagos</a></li>
-        <li class="hide-on-large-only" ><a href="procedimientos.php"><i class="material-icons left">health_and_safety</i>Procedimientos</a>
     </ul>
 </header>
     <main>
@@ -74,12 +49,12 @@
 
 
     </main>
-    <!--Pie del documento-->
+    <!--Footer-->
     <footer class="page-footer blue-grey ">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Smile Design</h5>
+                    <h5 class="white-text">Bank</h5>
                 </div>
                 <div class="col l4 offset-l2 s12">
                 </div>
@@ -87,11 +62,11 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2021 Copyright
+                © 2022 Copyright
             </div>
         </div>
     </footer>
-    <!--Importación de archivos JavaScript al final del cuerpo para una carga optimizada-->
+    <!--Optimized JS Archives-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
