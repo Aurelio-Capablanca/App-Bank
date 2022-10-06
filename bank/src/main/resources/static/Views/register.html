@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+</head>
+<header>
+    <nav class="blue-grey darken-2">
+        <div class="nav-wrapper">
+        </div>
+    </nav>
+</header>
+<main>
+    <body>
+
+    <br>
+    <div class="container">
+        <form method="post" id="register-form">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="nombres" type="text" name="nombres" class="validate" required/>
+                    <label for="nombres">Nombres</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="apellidos" type="text" name="apellidos" class="validate" required/>
+                    <label for="apellidos">Apellidos</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="correo" type="email" name="correo" class="validate" required/>
+                    <label for="correo">Correo</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">person_pin</i>
+                    <input id="alias" type="text" name="alias" class="validate" required/>
+                    <label for="alias">Alias</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">security</i>
+                    <input id="clave1" type="password" name="clave1" class="validate" required/>
+                    <label for="clave1">Clave</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">security</i>
+                    <input id="clave2" type="password" name="clave2" class="validate" required/>
+                    <label for="clave2">Confirmar clave</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="txtDireccion" type="text" name="txtDireccion" class="validate" required/>
+                    <label for="txtDireccion">Direccion</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="txtTel" type="text" name="txtTel" class="validate" required/>
+                    <label for="txtTel">Telefono</label>
+                </div>
+            </div>
+            <div class="row center-align">
+                <button type="submit" class="loginbutton">Agregar Usuario</button>
+            </div>
+        </form>
+    </div>
+
+
+    </body>
+</main>
+<!--footer-->
+<footer class="page-footer blue-grey darken-2" >
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Bank</h5>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2022 Copyright
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<script type="text/javascript" src="../JS/init.js"></script>
+<script type="text/javascript" src=""></script>
+</body>
+</html>
