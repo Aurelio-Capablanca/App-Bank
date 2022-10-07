@@ -1,6 +1,6 @@
 package com.bankapp.bank.controllersRest;
 
-import com.bankapp.bank.Models.Usuario;
+import com.bankapp.bank.Models.Users;
 import com.bankapp.bank.Repository.UsersRepository;
 import com.bankapp.bank.Service.UsersServiceImp;
 
@@ -23,31 +23,31 @@ public class UsuarioController {
 
     //listar
     @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
-    public List<Usuario> getUsuario() {
+    public List<Users> getUsuario() {
         return usersServiceImp.getUsers();
     }
 
     //agregar
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
-    public void registrarUsuario(@RequestBody Usuario usuario) {
+    public void registerUser(@RequestBody Users usuario) {
         usersServiceImp.create(usuario);
     }
 
     @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.DELETE)
-    public void eliminar(@PathVariable Long id) {
+    public void delete(@PathVariable Long id) {
         usersServiceImp.delete(id);
     }
 
     @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Usuario> updateUser(@PathVariable long id, @RequestBody Usuario user) {
-        Optional<Usuario> CrudData = repo.findById(id);
+    public ResponseEntity<Users> updateUser(@PathVariable long id, @RequestBody Users user) {
+        Optional<Users> CrudData = repo.findById(id);
         if (CrudData.isPresent()) {
-            Usuario _Usuario = CrudData.get();
-            _Usuario.setNombre(user.getNombre());
-            _Usuario.setApellido(user.getApellido());
-            _Usuario.setEmail(user.getEmail());
-            _Usuario.setTelefono(user.getTelefono());
-            return new ResponseEntity<>(repo.save(_Usuario), HttpStatus.OK);
+            Users _Users = CrudData.get();
+            _Users.setName(user.getName());
+            _Users.setLastName(user.getLastName());
+            _Users.setEmail(user.getEmail());
+            _Users.setPassword(user.getPhone());
+            return new ResponseEntity<>(repo.save(_Users), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

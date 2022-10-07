@@ -23,48 +23,30 @@
         <form method="post" id="accountregister-form">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">person</i>
-                    <input id="nombres" type="text" name="nombres" class="validate" required/>
-                    <label for="nombres">Name</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">person</i>
-                    <input id="apellidos" type="text" name="apellidos" class="validate" required/>
-                    <label for="apellidos">Surname</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">email</i>
-                    <input id="correo" type="email" name="correo" class="validate" required/>
-                    <label for="correo">Email</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">person_pin</i>
-                    <input id="alias" type="text" name="alias" class="validate" required/>
-                    <label for="alias">User</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">security</i>
-                    <input id="clave1" type="password" name="clave1" class="validate" required/>
-                    <label for="clave1">Password</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">security</i>
-                    <input id="clave2" type="password" name="clave2" class="validate" required/>
-                    <label for="clave2">Confirm Password</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">location_on</i>
+                    <i class="material-icons prefix">account_balance</i>
                     <input id="txtNumber" type="text" name="txtNumber" placeholder="00000000-0" pattern="[0-9]{8}[-][0-9]{1}" oncopy="return false" oncut="return false"  class="validate" required />
-                    <label for="txtNumber">DNI</label>
+                    <label for="txtNumber">Number Account</label>
                 </div>
                 <div class="input-field col s12 m6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="txtTel" type="text" name="txtTel" class="validate" required/>
-                    <label for="txtTel">Phone</label>
+                    <i class="material-icons prefix">attach_money</i>
+                    <input id="txtbalance" type="number" name="txtbalance" class="validate" max="9999.99" min="0.01" step="any" required/>
+                    <label for="txtbalance">Balance</label>
                 </div>
+
+                <div class="switch col s12 m6">
+                    <i class="material-icons prefix">format_list_bulleted</i>
+                    <label for="txttype">Type Account</label>
+                    <label>
+                        Savings
+                        <input id="txttype" type="checkbox">
+                        <span class="lever"></span>
+                        Ordinary
+                    </label>
+                </div>
+
             </div>
             <div class="row center-align">
-                <button type="submit" class="loginbutton">Agregar Usuario</button>
+                <button type="submit" class="loginbutton">Register Account</button>
             </div>
         </form>
     </div>
@@ -93,6 +75,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 <script type="text/javascript" src="../JS/init.js"></script>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="../JS/create_account.js"></script>
 </body>
 </html>

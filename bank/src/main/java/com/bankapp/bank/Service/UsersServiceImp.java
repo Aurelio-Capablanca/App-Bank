@@ -1,6 +1,6 @@
 package com.bankapp.bank.Service;
 
-import com.bankapp.bank.Models.Usuario;
+import com.bankapp.bank.Models.Users;
 import com.bankapp.bank.Repository.ClientsRepository;
 import com.bankapp.bank.Repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class UsersServiceImp implements UsersService {
     UsersRepository repo;
 
     @Override
-    public List<Usuario> getUsers() {
+    public List<Users> getUsers() {
         return repo.findAll();
     }
 
@@ -25,7 +25,7 @@ public class UsersServiceImp implements UsersService {
     }
 
     @Override
-    public void create(Usuario usuario) {
+    public void create(Users usuario) {
         repo.save(usuario);
     }
 }

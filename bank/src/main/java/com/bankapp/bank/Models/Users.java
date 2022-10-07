@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "usuarios")
 @ToString
 @EqualsAndHashCode
-public class Usuario {
+public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,12 +23,12 @@ public class Usuario {
     @Getter
     @Setter
     @Column(name = "nombre")
-    private String nombre;
+    private String name;
 
     @Getter
     @Setter
     @Column(name = "apellido")
-    private String apellido;
+    private String lastName;
 
     @Getter
     @Setter
@@ -38,7 +38,7 @@ public class Usuario {
     @Getter
     @Setter
     @Column(name = "telefono")
-    private String telefono;
+    private String phone;
 
     @Getter
     @Setter

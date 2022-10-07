@@ -1,15 +1,15 @@
 package com.bankapp.bank.Service;
 
-import com.bankapp.bank.Models.Usuario;
+import com.bankapp.bank.Models.Users;
 
 import java.util.List;
 
 public interface UsersService {
 
-    List<Usuario> getUsers();
+    List<Users > getUsers();
 
     void delete(Long id);
 
-    void create(Usuario usuario);
+    void create(Users usuario);
 
 }
