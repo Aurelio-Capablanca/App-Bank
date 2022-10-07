@@ -17,7 +17,6 @@ public class UsersServiceImp implements UsersService {
     @Override
     public List<Usuario> getUsers() {
         return repo.findAll();
-
     }
 
     @Override
