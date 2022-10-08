@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
-    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
 </head>
@@ -117,14 +117,19 @@
     <div class="container">
         <div class="row">
 
-            <H2>Enter your Account number to transfer</H2>
+            <H3 class="col s12"> Enter the amount to transfer </H3>
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">person_pin</i>
-                <input id="account_number_transfer" type="text" name="account_number_transfer" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <input id="account_number_transfer" type="number" name="account_number_transfer" max="9999.99" min="0.01" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
                 <label for="account_number_transfer">Account Number To Transfer</label>
             </div>
-            <div class="col s12 center-align">
+            <div class="col s6 center-align">
                 <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="OK"><i class="material-icons">send</i></button>
+                <br>
+                <a href=""></a>
+            </div>
+            <div class="col s6 center-align">
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Generate PDF"><i class="material-icons">picture_as_pdf</i></button>
                 <br>
                 <a href=""></a>
             </div>
@@ -154,7 +159,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-<script type="text/javascript" src="../JS/init.js"></script>
+<script type="text/javascript" src="JS/init.js"></script>
 <script type="text/javascript" src=""></script>
 </body>
 </html>

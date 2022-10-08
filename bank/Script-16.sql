@@ -149,4 +149,4 @@ values
 ("Banco Davivienda Salvadoreño, S.A", "Avenida Olímpica No.3550. San Salvador, El Salvador, C.A. Apdo. Postal No.: (0673)", "2556-2000","Ing. Pedro Alejandro Uribe Torres",1)
 
 
-
+select * from account a 
