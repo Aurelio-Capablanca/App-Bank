@@ -12,14 +12,13 @@ import javax.persistence.*;
 @Table(name = "account")
 @ToString
 @EqualsAndHashCode
-public class account {
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Getter
     @Setter
     @Column(name = "id_account")
-    private int id_account;
+    private Long id_account;
 
     @Getter
     @Setter

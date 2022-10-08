@@ -131,7 +131,6 @@ insert into statustransaction (status_transaction) values ("In Process")
 insert into statustransaction (status_transaction) values ("Cancelled")
 
 
-
 select * from account a 
 
 alter table account Modify number_account varchar(36)
@@ -142,6 +141,12 @@ values ("SV52BPRA34322344333434434343", 2344.56, 1,1)
 select * from banks b 
 
 insert into banks (name_bank, direction_bank, phone_bank, president_bank,id_account)
-values ()
+values ("Banco Agrícola, S.A.", "Blvd. Constitución No.:100, San Salvador, El Salvador, C.A.", "2267-5000", "Ricardo Mauricio Rosillo Rojas", 1)
+
+insert into banks (name_bank, direction_bank, phone_bank, president_bank,id_account)
+values 
+("Banco Cuscatlán de El Salvador, S.A", "Edificio Pirámide Km. 10 carretera a Santa Tecla. Depto. La Libertad", "2228-7777", "	Lic. José Eduardo Montenegro Palomo", 1),
+("Banco Davivienda Salvadoreño, S.A", "Avenida Olímpica No.3550. San Salvador, El Salvador, C.A. Apdo. Postal No.: (0673)", "2556-2000","Ing. Pedro Alejandro Uribe Torres",1)
+
 
 
