@@ -52,10 +52,10 @@ public class Clients {
     @Column(name = "password_client")
     private String password_client;
 
-    /*@Getter
+    @Getter
     @Setter
     @Column(name = "id_statusclient")
     private int id_statusclient;
-*/
+
 
 }

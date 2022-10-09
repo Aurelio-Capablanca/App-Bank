@@ -5,13 +5,14 @@ $(document).ready(function() {
 
 async function addUsers(){
       let datee = {};
-      datee.dni_client = document.getElementById('txtDNI').value;
-      datee.email_client = document.getElementById('txtEmail').value;
       datee.name_client = document.getElementById('txtName').value;
-      datee.password_client = document.getElementById('txtPassword').value;
-      datee.phone_client = document.getElementById('txtTel').value;
       datee.surname_client = document.getElementById('txtLastName').value;
+      datee.phone_client = document.getElementById('txtTel').value;
+      datee.email_client = document.getElementById('txtEmail').value;
+      datee.dni_client = document.getElementById('txtDNI').value;
       datee.user_client = document.getElementById('txtUsername').value;
+      datee.password_client = document.getElementById('txtPassword').value;
+      datee.id_statusclient = 1;
 
 
 
@@ -33,6 +34,6 @@ async function addUsers(){
 
       });
       alert("El usuario se ha registrado con exito");
-      window.location.href =  'login.html';
+      //window.location.href =  'login.html';
 
 }
