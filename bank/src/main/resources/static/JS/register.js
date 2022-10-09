@@ -34,6 +34,6 @@ async function addUsers(){
 
       });
       alert("El usuario se ha registrado con exito");
-      //window.location.href =  'login.html';
+      window.location.href =  'login.html';
 
 }

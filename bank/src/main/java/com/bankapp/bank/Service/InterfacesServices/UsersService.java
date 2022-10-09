@@ -1,4 +1,4 @@
-package com.bankapp.bank.Service;
+package com.bankapp.bank.Service.InterfacesServices;
 
 import com.bankapp.bank.Models.Users;
 

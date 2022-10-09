@@ -3,6 +3,7 @@ package com.bankapp.bank.Service;
 import com.bankapp.bank.Models.Users;
 import com.bankapp.bank.Repository.UsersRepository;
 
+import com.bankapp.bank.Service.InterfacesServices.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
