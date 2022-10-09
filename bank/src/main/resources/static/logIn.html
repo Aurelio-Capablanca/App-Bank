@@ -33,16 +33,19 @@
 
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">person_pin</i>
-                <input id="user" type="text" name="user" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
-                <label for="user">User</label>
+                <input id="txtUsernamee" type="text" name="user" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="txtUsernamee">User</label>
             </div>
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">security</i>
-                <input id="pass" type="password" name="clave" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
-                <label for="pass">Password</label>
+                <input id="txtPassword" type="password" name="clave" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="txtPassword">Password</label>
             </div>
             <div class="col s12 center-align">
-                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Enter"><i class="material-icons">send</i></button>
+                <!--<button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Enter"><i class="material-icons">send</i></button>-->
+                <a onclick="login()" href="#" class="btn btn-primary btn-user btn-block">
+                    iniciar sesion
+                </a>
                 <br>
                 <a href="register.html">Register</a>
             </div>
@@ -75,6 +78,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 <script type="text/javascript" src="JS/init.js"></script>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="JS/login.js"></script>
 </body>
 </html>
