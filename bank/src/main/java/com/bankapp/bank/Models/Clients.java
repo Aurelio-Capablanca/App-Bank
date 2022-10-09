@@ -9,16 +9,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "clients")
-@ToString
-@EqualsAndHashCode
-public class clients {
+public class Clients {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Getter
     @Setter
     @Column(name = "id_client")
-    private int id_client;
+    private Long id_client;
 
     @Getter
     @Setter
@@ -55,10 +52,10 @@ public class clients {
     @Column(name = "password_client")
     private String password_client;
 
-    @Getter
+    /*@Getter
     @Setter
     @Column(name = "id_statusclient")
     private int id_statusclient;
-
+*/
 
 }

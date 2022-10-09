@@ -1,4 +1,4 @@
-package com.bankapp.bank.Models;
+/*package com.bankapp.bank.Models;
 
 
 import lombok.EqualsAndHashCode;
@@ -57,3 +57,4 @@ public class historytransaction {
     private int id_original_transaction;
 
 }
+*/

@@ -1,4 +1,4 @@
-package bank.Models;
+/*package bank.Models;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -26,3 +26,4 @@ public class accounttransaction {
     private int id_transaction;
 
 }
+*/

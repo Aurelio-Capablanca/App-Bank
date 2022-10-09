@@ -1,4 +1,4 @@
-package com.bankapp.bank.Models;
+/*package com.bankapp.bank.Models;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -46,3 +46,4 @@ public class banks {
     private int id_account;
 
 }
+*/

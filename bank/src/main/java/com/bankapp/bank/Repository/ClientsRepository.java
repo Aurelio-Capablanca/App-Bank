@@ -1,7 +1,10 @@
 package com.bankapp.bank.Repository;
 
-import com.bankapp.bank.Models.clients;
+import com.bankapp.bank.Models.Clients;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ClientsRepository extends JpaRepository<clients, Long> {
+@Repository
+public interface ClientsRepository extends JpaRepository<Clients, Long> {
+
 }

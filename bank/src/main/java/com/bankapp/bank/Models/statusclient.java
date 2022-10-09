@@ -1,4 +1,4 @@
-package com.bankapp.bank.Models;
+/*package com.bankapp.bank.Models;
 
 
 import lombok.EqualsAndHashCode;
@@ -27,3 +27,4 @@ public class statusclient {
     @Column(name = "status_client")
     private String status_client;
 }
+*/
