@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   // on ready
+   //document.getElementById('account_number_transfer').value = localStorage.DestinationAccount;
 });
 
 async function registerAccount(){

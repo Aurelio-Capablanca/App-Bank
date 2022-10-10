@@ -18,6 +18,8 @@ async function searchNumber() {
 
   const answer = await request.text();
   if (answer != 'FAIL') {
+   localStorage.DestinationAccount = data.number_account;
+   alert(localStorage.DestinationAccount)
    alert("Success")
    window.location.href = 'transference_count.html'
   } else {

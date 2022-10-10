@@ -31,11 +31,22 @@ public class AccountController  {
     AccountServiceImp.create(account);
   }
 
-  @RequestMapping(value = "api/account_number", method = RequestMethod.POST)
+  @RequestMapping(value = "api/account_number1", method = RequestMethod.POST)
   public String ReadAccountNumber(@RequestBody Account account) {
     Account searchNumber = AccountServiceImp.getNumberAccount(account);
     if (searchNumber != null) {
-      return "SUCCESS";
+      String tokenJwt = jwtUtil.create(String.valueOf(searchNumber.getId_typeaccount()), searchNumber.getNumber_account());
+      return tokenJwt;
+    }
+    return "FAIL";
+  }
+
+  @RequestMapping(value = "api/account_number", method = RequestMethod.POST)
+  public String ReadAccountNumberBalance(@RequestBody Account account) {
+    Account searchNumber = AccountServiceImp.getNumberBalanceAccount(account);
+    if (searchNumber != null) {
+      String tokenJwt = jwtUtil.create(String.valueOf(searchNumber.getId_typeaccount()), searchNumber.getNumber_account());
+      return tokenJwt;
     }
     return "FAIL";
   }

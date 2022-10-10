@@ -9,4 +9,6 @@ public interface AccountsService {
 
   Account getNumberAccount(Account account);
 
+  Account getNumberBalanceAccount(Account account);
+
 }

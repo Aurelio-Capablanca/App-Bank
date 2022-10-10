@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Service
@@ -36,10 +37,22 @@ public class AccountServiceImp implements AccountsService {
     if (list.isEmpty()) {
       return null;
     }
-    //System.out.println(list.get(0));
+    System.out.println(list.get(0));
     //System.out.println(account.getNumber_account());
     return list.get(0);
   }
 
+  @Override
+  public Account getNumberBalanceAccount(Account account) {
+    String query = "SELECT * FROM account WHERE number_account =:number_account";
+    List<Account> list = entityManager.createNativeQuery(query)
+            .setParameter("number_account", account.getBalance_account())
+            .getResultList();
+    if (list.isEmpty()) {
+      return null;
+    }
+    System.out.println(list.get(0));
+    return list.get(0);
+  }
 
 }
