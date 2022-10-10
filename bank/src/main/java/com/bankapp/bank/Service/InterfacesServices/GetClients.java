@@ -4,5 +4,5 @@ import com.bankapp.bank.Models.Clients;
 
 public interface GetClients {
 
-    boolean getClientsByCredentials(Clients clients);
+    Clients getClientsByCredentials(Clients clients);
 }

@@ -2,6 +2,7 @@ package com.bankapp.bank.controllersRest;
 
 import com.bankapp.bank.Models.Clients;
 import com.bankapp.bank.Service.GetClientsImp;
+import com.bankapp.bank.Utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +15,17 @@ public class AuthController {
     @Autowired
     GetClientsImp getClientsImp;
 
+    @Autowired
+    private JWTUtil jwtUtil;
+
     @RequestMapping(value = "api/login", method = RequestMethod.POST)
     public String login(@RequestBody Clients clients){
-        if(getClientsImp.getClientsByCredentials(clients)){
-            return "OK";
+        Clients clienLog = getClientsImp.getClientsByCredentials(clients);
+
+        if(clienLog != null){
+
+            String tokenJwt = jwtUtil.create(String.valueOf(clienLog.getId_client()), clienLog.getUser_client());
+            return tokenJwt;
         }
         return  "FAIL";
     }
