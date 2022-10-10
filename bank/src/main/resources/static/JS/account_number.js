@@ -18,8 +18,8 @@ async function searchNumber() {
 
   const answer = await request.text();
   if (answer != 'FAIL') {
-  alert("Success")
-    //window.location.href = 'transference_count.html'
+   alert("Success")
+   window.location.href = 'transference_count.html'
   } else {
     alert("La cuenta no existe");
   }
