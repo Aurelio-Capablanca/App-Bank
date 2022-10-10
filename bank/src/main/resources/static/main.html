@@ -59,32 +59,32 @@
             <!-- Formulario para crear o actualizar un registro -->
             <form method="post" id="profile-form">
                 <!-- Campo oculto para asignar el id del registro al momento de modificar -->
-                <input class="hide" type="number" id="id_usuario" name="id_usuario"/>
+                <input class="" type="text" id="id_user" name="id_user"/>
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="nombre_usuario" type="text" name="nombre_usuario" class="validate"  required/>
-                        <label for="nombre_usuario">Nombre Usuario</label>
+                        <input id="name_user" type="text" name="name_user" class="validate"  required/>
+                        <label for="name_user">Nombre Usuario</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="apellido_usuario" type="text" name="apellido_usuario" class="validate"  required/>
-                        <label for="apellido_usuario">Apellido Usuario</label>
+                        <input id="surname_user" type="text" name="surname_user" class="validate"  required/>
+                        <label for="surname_user">Apellido Usuario</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">place</i>
-                        <input type="text" id="direccion_usuario" name="direccion_usuario" maxlength="200" class="validate" required/>
-                        <label for="direccion_usuario">Dirección</label>
+                        <input type="text" id="dni_user" name="dni_user" maxlength="200" class="validate" required/>
+                        <label for="dni_user">Dirección</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
-                        <input type="email" id="correo_usuario" name="correo_usuario" maxlength="100" class="validate" required/>
-                        <label for="correo_usuario">Correo electrónico</label>
+                        <input type="email" id="email_user" name="email_user" maxlength="100" class="validate" required/>
+                        <label for="email_user">Correo electrónico</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">person</i>
-                        <input type="text" id="alias_usuario" name="alias_usuario" maxlength="200" class="validate" required/>
-                        <label for="alias_usuario">Alias</label>
+                        <input type="text" id="client_user" name="client_user" maxlength="200" class="validate" required/>
+                        <label for="client_user">Alias</label>
                     </div>
                     <div>
                         <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons center-align">cancel</i></a>
@@ -207,6 +207,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 <script type="text/javascript" src="JS/init.js"></script>
+<script type="text/javascript" src="JS/main.js"></script>
 <script type="text/javascript" src="JS/destroyToken.js"></script>
  </body>
 </html>

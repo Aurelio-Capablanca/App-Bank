@@ -123,6 +123,7 @@ select * from typetransaction t
 
 insert into typetransaction (type_transaction) values ("Deposit")
 insert into typetransaction (type_transaction) values ("Retirement")
+insert into typetransaction (type_transaction) values ("Transference")
 
 
 select * from statustransaction s  
@@ -165,7 +166,8 @@ select * from transactions t
 
 
 
-
+select * from statusclient s 
+insert into statusclient (status_client) values("Active")
 
 
 

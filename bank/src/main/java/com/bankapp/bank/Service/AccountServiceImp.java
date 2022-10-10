@@ -2,8 +2,8 @@ package com.bankapp.bank.Service;
 
 
 import com.bankapp.bank.Models.Account;
-import com.bankapp.bank.Models.Transactions;
 import com.bankapp.bank.Repository.AccountRepository;
+import com.bankapp.bank.Service.InterfacesServices.AccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Service
-public class AccountServiceImp implements AccountsService{
+public class AccountServiceImp implements AccountsService {
 
 
   @PersistenceContext

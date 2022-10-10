@@ -1,13 +1,11 @@
-// Call the dataTables jQuery plugin
 $(document).ready(function() {
-    //on ready
+
 });
 
 async function login(){
       let datee = {};
       datee.user_client = document.getElementById('txtUsernamee').value;
       datee.password_client = document.getElementById('txtPassword').value;
-
         //peticion al servidor
       const request = await fetch('api/login', {
             method: 'POST',
