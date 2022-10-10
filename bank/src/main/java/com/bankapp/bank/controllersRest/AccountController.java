@@ -23,10 +23,18 @@ public class AccountController  {
   private AccountServiceImp AccountServiceImp;
 
   @RequestMapping(value = "api/account", method = RequestMethod.POST)
-  public void registerAccount(@RequestBody Account accounts) {
-    AccountServiceImp.create(accounts);
+  public void registerAccount(@RequestBody Account account) {
+    AccountServiceImp.create(account);
   }
 
+  @RequestMapping(value = "api/account_number", method = RequestMethod.POST)
+  public String ReadAccountNumber(@RequestBody Account account) {
+    Account searchNumber = AccountServiceImp.getNumberAccount(account);
+    if (searchNumber != null) {
+      return "SUCCESS";
+    }
+    return "FAIL";
+  }
 
 
 

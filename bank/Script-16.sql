@@ -149,4 +149,23 @@ values
 ("Banco Davivienda Salvadoreño, S.A", "Avenida Olímpica No.3550. San Salvador, El Salvador, C.A. Apdo. Postal No.: (0673)", "2556-2000","Ing. Pedro Alejandro Uribe Torres",1)
 
 
+alter table clients modify password_client varchar(255)
+select * from clients
+
 select * from account a 
+-- API insert 
+
+
+alter table transactions modify name_transaction varchar(33)
+show create table transactions 
+select * from transactions t 
+
+-- API insert 
+
+
+
+
+
+
+
+

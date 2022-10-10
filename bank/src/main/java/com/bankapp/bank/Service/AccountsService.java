@@ -5,6 +5,8 @@ import com.bankapp.bank.Models.Account;
 
 public interface AccountsService {
 
-  void create (Account accounts);
+  void create (Account account);
+
+  Account getNumberAccount(Account account);
 
 }

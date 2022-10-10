@@ -11,19 +11,18 @@ import javax.persistence.*;
 @Table(name = "transactions")
 @ToString
 @EqualsAndHashCode
-public class transactions {
+public class Transactions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Getter
     @Setter
     @Column(name = "id_transaction ")
-    private int id_transaction;
+    private Long id_transaction;
 
     @Getter
     @Setter
     @Column(name = "name_transaction")
-    private String name_transaction;
+    private String name_transaction;// Data not used, bad design
 
     @Getter
     @Setter
