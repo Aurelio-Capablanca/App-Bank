@@ -71,10 +71,10 @@
                         <input id="surname_user" type="text" name="surname_user" class="validate"  required/>
                         <label for="surname_user">Apellido Usuario</label>
                     </div>
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">place</i>
-                        <input type="text" id="dni_user" name="dni_user" maxlength="200" class="validate" required/>
-                        <label for="dni_user">Dirección</label>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">location_on</i>
+                        <input id="txtDNI" type="text" name="txtDNI" placeholder="00000000-0" pattern="[0-9]{8}[-][0-9]{1}" oncopy="return false" oncut="return false"  class="validate" required />
+                        <label for="txtDNI">DNI</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
@@ -88,7 +88,7 @@
                     </div>
                     <div>
                         <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons center-align">cancel</i></a>
-                        <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></button>
+                        <a type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></a>
                     </div>
                 </div>
             </form>
@@ -105,18 +105,18 @@
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">security</i>
-                        <input id="clave_nueva_1" type="password" name="clave_nueva_1" class="validate" required/>
-                        <label for="clave_nueva_1">Clave</label>
+                        <input id="pass_new_1" type="password" name="pass_new_1" class="validate" required/>
+                        <label for="pass_new_1">Clave</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">security</i>
-                        <input id="clave_nueva_2" type="password" name="clave_nueva_2" class="validate" required/>
-                        <label for="clave_nueva_2">Confirmar clave</label>
+                        <input id="pass_new_2" type="password" name="pass_new_2" class="validate" required/>
+                        <label for="pass_new_2">Confirmar clave</label>
                     </div>
                 </div>
                 <div class="row center-align">
                     <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                    <a type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></a>
                 </div>
             </form>
         </div>

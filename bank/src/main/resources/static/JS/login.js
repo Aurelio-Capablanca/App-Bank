@@ -22,7 +22,7 @@ async function login(){
                  localStorage.token = respuesta;
                  localStorage.userName = datee.user_client;
                  alert("El usuario se ha encontrado ");
-                 window.location.href = "main.html" ;
+                 window.location.href = "enter_account.html" ;
             } else{
                 alert("Las credenciales son incorrectas. Por favor intente nuevamente.")
             }

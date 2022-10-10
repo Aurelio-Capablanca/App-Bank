@@ -41,12 +41,12 @@ public class Transactions {
 
     @Getter
     @Setter
-    @Column(name = "id_typetransaction ")
+    @Column(name = "id_typetransaction")
     private int id_typetransaction;
 
     @Getter
     @Setter
-    @Column(name = "id_statustransaction ")
+    @Column(name = "id_statustransaction")
     private int id_statustransaction;
 
 
