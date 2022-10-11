@@ -160,14 +160,27 @@ select * from account a
 alter table transactions modify name_transaction varchar(33)
 show create table transactions 
 select * from transactions t 
-
 -- API insert 
 
 
+select * from clients c 
+
+select balance_account from account where number_account = number_account 
 
 
 select * from statusclient s 
 insert into statusclient (status_client) values("Active")
+
+
+
+---------------------------------------------------------------------
+
+select * from transactions t 
+select * from account a 
+select * from clients c 
+
+
+
 
 
 
