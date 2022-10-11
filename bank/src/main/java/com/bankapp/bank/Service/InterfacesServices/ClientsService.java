@@ -5,4 +5,5 @@ import com.bankapp.bank.Models.Users;
 
 public interface ClientsService {
     void createClients(Clients clients);
+    Clients getClientsById(Long id);
 }

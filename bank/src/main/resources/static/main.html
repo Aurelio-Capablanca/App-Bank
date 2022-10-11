@@ -13,9 +13,10 @@
     </head>
 <body>
 <header>
+
     <nav class="nav-extended blue-grey">
         <div class="nav-wrapper">
-            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+            <a  href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
                 <i class="material-icons">menu</i>
             </a>
             <ul class="left left hide-on-med-and-down">
@@ -36,6 +37,7 @@
                 <br>
             </div>
         <li>
+        <!-- boton guardar cambios-->
         <li><a href="#profile-modal" class="modal-trigger waves-effect waves-light btn"><i class="material-icons">face</i>Editar perfil</a></li>
         <li><a href="#password-modal" class="modal-trigger waves-effect waves-light btn"><i class="material-icons">lock</i>Cambiar clave</a></li>
 <!--        <li><a href="intentosusuario.php"><i class="material-icons left">gpp_maybe</i>Intentos Usuario</a></li>-->
@@ -50,6 +52,8 @@
         <div class="divider"></div>
         </li>
     </ul>
+
+
     <!-- Componente Modal para mostrar el formulario de editar perfil -->
     <div id="profile-modal" class="modal">
         <div class="modal-content center-align">
@@ -63,12 +67,12 @@
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="name_user" type="text" name="name_user" class="validate"  required/>
+                        <input id="name_user" type="text" placeholder="nombre" name="name_user" class="validate"  required/>
                         <label for="name_user">Nombre Usuario</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="surname_user" type="text" name="surname_user" class="validate"  required/>
+                        <input id="surname_user" type="text" placeholder="apellido" name="surname_user" class="validate"  required/>
                         <label for="surname_user">Apellido Usuario</label>
                     </div>
                     <div class="input-field col s12 m6">
@@ -78,17 +82,23 @@
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
-                        <input type="email" id="email_user" name="email_user" maxlength="100" class="validate" required/>
+                        <input type="email" id="email_user" placeholder="" name="email_user" maxlength="100" class="validate" required/>
                         <label for="email_user">Correo electrónico</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">person</i>
-                        <input type="text" id="client_user" name="client_user" maxlength="200" class="validate" required/>
+                        <input type="text" id="txtTel" placeholder="telefono" name="client_user" maxlength="200" class="validate" required/>
+                        <label for="txtTel">Telefono</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="client_user" placeholder="Alias" name="client_user" maxlength="200" class="validate" required/>
                         <label for="client_user">Alias</label>
                     </div>
                     <div>
                         <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons center-align">cancel</i></a>
-                        <a type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></a>
+                            <!--boton save-->
+                        <a  type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></a>
                     </div>
                 </div>
             </form>

@@ -25,7 +25,8 @@ public class AuthController {
         if(clienLog != null){
 
             String tokenJwt = jwtUtil.create(String.valueOf(clienLog.getId_client()), clienLog.getUser_client());
-            return tokenJwt;
+            String id = String.valueOf(clienLog.getId_client());
+            return tokenJwt + " " + id;
         }
         return  "FAIL";
     }

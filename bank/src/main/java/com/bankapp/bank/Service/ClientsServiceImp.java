@@ -1,6 +1,7 @@
 package com.bankapp.bank.Service;
 
 import com.bankapp.bank.Models.Clients;
+import com.bankapp.bank.Models.Users;
 import com.bankapp.bank.Repository.ClientsRepository;
 import com.bankapp.bank.Service.InterfacesServices.ClientsService;
 import de.mkammerer.argon2.Argon2;
@@ -8,11 +9,19 @@ import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.List;
+import java.util.Optional;
+
 @SuppressWarnings("deprecation")
 @Service
 public class ClientsServiceImp implements ClientsService {
     @Autowired
     ClientsRepository clientsRepository;
+
+    @PersistenceContext
+    EntityManager entityManager;
 
     @Override
     public void createClients(Clients clients) {
@@ -22,5 +31,16 @@ public class ClientsServiceImp implements ClientsService {
         clients.setPassword_client(hash);
 
         clientsRepository.save(clients);
+    }
+
+    @Override
+    public Clients getClientsById(Long id){
+
+        Optional<Clients> optional = clientsRepository.findById(id);
+        if(optional.isPresent()){
+            return optional.get();
+        }else{
+            return null;
+        }
     }
 }
