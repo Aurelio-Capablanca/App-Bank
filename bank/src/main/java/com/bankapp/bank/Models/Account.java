@@ -28,7 +28,7 @@ public class Account {
     @Getter
     @Setter
     @Column(name = "balance_account")
-    private double balance_account;
+    private static double balance_account;
 
     @Getter
     @Setter

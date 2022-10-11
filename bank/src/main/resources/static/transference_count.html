@@ -120,11 +120,11 @@
             <H3 class="col s12"> Enter the amount to transfer </H3>
             <div class="input-field col s12 m6 offset-m3">
                 <i class="material-icons prefix">person_pin</i>
-                <input id="account_number_transfer" type="number" name="account_number_transfer" max="9999.99" min="0.01" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
-                <label for="account_number_transfer">Amonut Number To Transfer</label>
+                <input id="account_amount" type="number" name="account_amount" max="9999.99" min="0.01" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="account_amount">Amonut Number To Transfer</label>
             </div>
             <div class="col s6 center-align">
-                <a type="submit" onclick="" class="btn waves-effect blue tooltipped" data-tooltip="OK"><i class="material-icons">send</i></a>
+                <a type="submit" onclick="TransactionsOperations()" class="btn waves-effect blue tooltipped" data-tooltip="OK"><i class="material-icons">send</i></a>
                 <br>
                 <a href=""></a>
             </div>

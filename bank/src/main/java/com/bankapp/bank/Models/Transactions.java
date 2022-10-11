@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "transactions")
@@ -18,16 +19,6 @@ public class Transactions {
     @Setter
     @Column(name = "id_transaction ")
     private Long id_transaction;
-
-    @Getter
-    @Setter
-    @Column(name = "name_transaction")
-    private String name_transaction;// Data not used, bad design
-
-    @Getter
-    @Setter
-    @Column(name = "date_transaction")
-    private String date_transaction;//tipo de dato en la base de datos DATE --- Autogenerado
 
     @Getter
     @Setter
