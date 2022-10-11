@@ -20,9 +20,9 @@ public class TransactionController {
   @RequestMapping(value = "api/transactions", method = RequestMethod.POST)
   public void createTransaction(@RequestBody Transactions transactions){
     TransactionHelper th = new TransactionHelper();
-    System.out.println(th.getDestination_balance());
+    System.out.println(th.getSend_balance());
     System.out.println(transactions.getBalance_transaction());
-    Double operation = th.getDestination_balance() - transactions.getBalance_transaction();
+    Double operation = th.getSend_balance() - transactions.getBalance_transaction();
     transactions.setTotal_transaction(operation);
     transactionServiceImp.create(transactions);
   }

@@ -6,8 +6,9 @@ $(document).ready(function() {
 async function searchNumber() {
   let data = {};
   data.number_account = document.getElementById('account_number_transfer').value;
+  let operation = "Destination";
 
-  const request = await fetch('api/accountdestination_number_balance', {
+  const request = await fetch('api/accounts_number_balance/' + operation, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -20,10 +21,8 @@ async function searchNumber() {
   alert(answer)
   if (answer != 'FAIL') {
    localStorage.DestinationAccount = data.number_account;
-   localStorage.DestinationBalance = data.balance_account;
    alert(localStorage.DestinationAccount)
-   alert(localStorage.DestinationBalance)
-   alert("Success")
+   alert("SUCCESS")
    window.location.href = 'transference_count.html'
   } else {
     alert("La cuenta no existe");

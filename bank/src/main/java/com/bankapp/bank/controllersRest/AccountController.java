@@ -44,13 +44,34 @@ public class AccountController  {
     return "FAIL";
   }
 
-  @RequestMapping(value = "api/accountdestination_number_balance", method = RequestMethod.POST)
-  public String ReadAccountNumberBalance(@RequestBody Account account) {
+  @RequestMapping(value = "api/accountsend_number_balance", method = RequestMethod.POST)
+  public String ReadAccountNumberBalanceSend(@RequestBody Account account) {
     BigDecimal searchNumber = AccountServiceImp.getNumberBalanceAccount(account);
     if (searchNumber != null) {
       TransactionHelper th = new TransactionHelper();
-      th.setDestination_balance(searchNumber.doubleValue());
-      String dataAccount = jwtUtil.create(String.valueOf(account.getBalance_account()), account.getNumber_account());
+      th.setSend_balance(searchNumber.doubleValue());
+      String dataAccount = jwtUtil.create(String.valueOf(account.getId_account()), account.getNumber_account());
+      return dataAccount;
+    }
+    return "FAIL";
+  }
+
+  @RequestMapping(value = "api/accounts_number_balance/{operation}", method = RequestMethod.POST)
+  public String ReadAccountNumbers(@PathVariable String operation,@RequestBody Account account) {
+    BigDecimal searchNumber = AccountServiceImp.getNumberBalanceAccount(account);
+    if (searchNumber != null) {
+      TransactionHelper th = new TransactionHelper();
+      if(operation.equals("Send")){
+        System.out.println(searchNumber);
+        th.setSend_balance(searchNumber.doubleValue());
+        System.out.println("Send "+th.getSend_balance());
+      } else if (operation.equals("Destination")){
+        System.out.println(searchNumber);
+        th.setDestination_balance(searchNumber.doubleValue());
+        System.out.println("Destination "+th.getDestination_balance());
+      }
+
+      String dataAccount = jwtUtil.create(String.valueOf(1), account.getNumber_account());
       return dataAccount;
     }
     return "FAIL";

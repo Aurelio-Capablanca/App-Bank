@@ -120,7 +120,7 @@
             <H2>Enter your Account number and your Password to use it</H2>
     <div class="input-field col s12 m6 offset-m3">
         <i class="material-icons prefix">person_pin</i>
-        <input id="account_number" type="text" name="account_number" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+        <input id="account_number" type="text" name="account_number" class="validate" oncopy="return false" oncut="return false" onpaste="return true" required/>
         <label for="account_number">Account Number</label>
     </div>
 <!--            <div class="input-field col s12 m6 offset-m3">-->
@@ -129,7 +129,7 @@
 <!--                <label for="r_password">Password</label>-->
 <!--            </div>-->
     <div class="col s12 center-align">
-        <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Enter"><i class="material-icons">send</i></button>
+        <a onclick="EnterNumber()" type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Enter"><i class="material-icons">send</i></a>
         <br>
         <a href="create_account.html">Create a Acount</a>
     </div>
