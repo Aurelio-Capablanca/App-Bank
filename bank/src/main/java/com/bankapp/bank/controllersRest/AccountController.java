@@ -109,4 +109,20 @@ public class AccountController  {
     }
   }
 
+
+  @RequestMapping(value = "api/accountDeposits/{number_account2}", method = RequestMethod.PUT)
+  public ResponseEntity<Account> transactionDeposits(@PathVariable String number_account2, @RequestBody Account account) {
+    Transactions tr = new Transactions();
+    TransactionHelper th = new TransactionHelper();
+    if (number_account2!=null) {
+      double total;
+      total = th.getSend_balance() + th.getBalance_transaction();
+      System.out.println(total);
+      repo.updateSentAccount(number_account2,total);
+      return new ResponseEntity<>(HttpStatus.OK);
+    } else {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+  }
+
 }
