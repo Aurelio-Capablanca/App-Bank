@@ -28,31 +28,38 @@ async function CreateTransaction(){
 
 
 async function UpdateSentAccount(){
-      let data = {};
-      data.number_account = localStorage.DestinationAccount;
-      let number = localStorage.SendAccount.DestinationAccount;
+      let data2 = {};
+      data2.number_account = localStorage.SendAccount;
+      let number = localStorage.SendAccount;
 
-       const request = await fetch('api/accountUpDest/'+ number, {
+       const request = await fetch('api/accountSent/'+ number, {
             method: 'PUT',
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data2)
       });
 }
 
 async function UpdateDestAccount(){
-      let data = {};
-      data.number_account = localStorage.SendAccount;
-      let number = localStorage.SendAccount;
+      let data1 = {};
+      data1.number_account = localStorage.DestinationAccount;
+      let number = localStorage.DestinationAccount;
 
-        const request = await fetch('api/accountUpDest/'+ number, {
+        const request = await fetch('api/accountDest/'+ number, {
             method: 'PUT',
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data1)
       });
+      const answer = await request.text();
+        if (answer != 'FAIL') {
+         alert("SUCCESS")
+         window.location.href = 'main.html'
+        } else {
+          alert("FAIL");
+        }
 }

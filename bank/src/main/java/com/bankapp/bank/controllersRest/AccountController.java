@@ -46,7 +46,6 @@ public class AccountController  {
     if(BalanceAccount != null){
       TransactionHelper th = new TransactionHelper();
       th.setDestination_balance(BalanceAccount.doubleValue());
-      System.out.println(th.getDestination_balance());
       return "SUCCESS";
     }
     return "FAIL";
@@ -58,13 +57,9 @@ public class AccountController  {
     if (searchNumber != null) {
       TransactionHelper th = new TransactionHelper();
       if(operation.equals("Send")){
-        System.out.println(searchNumber);
         th.setSend_balance(searchNumber.doubleValue());
-        System.out.println("Send "+th.getSend_balance());
       } else if (operation.equals("Destination")){
-        System.out.println(searchNumber);
         th.setDestination_balance(searchNumber.doubleValue());
-        System.out.println("Destination "+th.getDestination_balance());
       }
       String dataAccount = jwtUtil.create(String.valueOf(1), account.getNumber_account());
       return dataAccount;
@@ -72,28 +67,42 @@ public class AccountController  {
     return "FAIL";
   }
 
-  @RequestMapping(value = "api/accountUpDest/{number_account}", method = RequestMethod.PUT)
+  @RequestMapping(value = "api/accountDest/{number_account}", method = RequestMethod.PUT)
   public ResponseEntity<Account> updateDestAccount(@PathVariable String number_account, @RequestBody Account account) {
     Transactions tr = new Transactions();
     TransactionHelper th = new TransactionHelper();
     if (number_account!=null) {
       double total = 0.0;
-      total = tr.getBalance_transaction() + th.getDestination_balance();
-      repo.updateDestAccount(account.getNumber_account(),total);
+      total = th.getBalance_transaction() + th.getDestination_balance();
+      repo.updateDestAccount(number_account,total);
       return new ResponseEntity<>(HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
 
-  @RequestMapping(value = "api/accountUpSent/{number_account}", method = RequestMethod.PUT)
-  public ResponseEntity<Account> updateSentAccount(@PathVariable String number_account, @RequestBody Account account) {
+  @RequestMapping(value = "api/accountSent/{number_account1}", method = RequestMethod.PUT)
+  public ResponseEntity<Account> updateSentAccount(@PathVariable String number_account1, @RequestBody Account account) {
     Transactions tr = new Transactions();
     TransactionHelper th = new TransactionHelper();
-    if (number_account!=null) {
-      double total = 0.0;
-      total = th.getDestination_balance() - tr.getBalance_transaction() ;
-      repo.updateSentAccount(number_account,total);
+    if (number_account1!=null) {
+      double total;
+      total = th.getSend_balance() - th.getBalance_transaction();
+      repo.updateSentAccount(number_account1,total);
+      return new ResponseEntity<>(HttpStatus.OK);
+    } else {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+  }
+
+  @RequestMapping(value = "api/accountRetirement/{number_account2}", method = RequestMethod.PUT)
+  public ResponseEntity<Account> transactionRetirement(@PathVariable String number_account2, @RequestBody Account account) {
+    Transactions tr = new Transactions();
+    TransactionHelper th = new TransactionHelper();
+    if (number_account2!=null) {
+      double total;
+      total = th.getSend_balance() - th.getBalance_transaction();
+      repo.updateSentAccount(number_account2,total);
       return new ResponseEntity<>(HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);

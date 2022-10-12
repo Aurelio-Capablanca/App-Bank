@@ -138,11 +138,13 @@ alter table account Modify number_account varchar(36)
 
 insert into account (number_account, balance_account, id_typeaccount, id_statusaccount) 
 values ("SV52BPRA34322344333434434343", 2344.56, 1,1)
+delete from account where id_account =1
 
 select * from banks b 
 
 insert into banks (name_bank, direction_bank, phone_bank, president_bank,id_account)
 values ("Banco Agrícola, S.A.", "Blvd. Constitución No.:100, San Salvador, El Salvador, C.A.", "2267-5000", "Ricardo Mauricio Rosillo Rojas", 1)
+update banks set id_account = 3 
 
 insert into banks (name_bank, direction_bank, phone_bank, president_bank,id_account)
 values 
@@ -179,8 +181,13 @@ select * from transactions t
 select * from account a 
 select * from clients c 
 
+update account set balance_account = ? where number_account = ?
+update banks set id_account = 6
+delete from account where id_account between 2 and 5
 
-
-
-
+  SELECT balance_account FROM account  WHERE  number_account ="12345678-9"
+  select * from transactions t 
+  select * from account a 
+  update account set balance_account = 500.99 where id_account =6
+  update account set balance_account = 300.99 where id_account =7
 
