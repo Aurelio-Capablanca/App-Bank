@@ -85,6 +85,7 @@
             </form>
         </div>
     </div>
+
     <!--Password modal -->
     <div id="password-modal" class="modal">
         <div class="modal-content">
@@ -111,15 +112,26 @@
             </form>
         </div>
     </div>
-<!--    end Modal -->
 </header>
 <main>
     <div class="container">
         <div class="row">
 
-            <h2>Your Balance is:</h2>
-            <div class="col s12 m12 12">
-                <h3 id="yourBalance" name="yourBalance"></h3>
+            <H3 class="col s12"> Enter the amount to Retire </H3>
+            <div class="input-field col s12 m6 offset-m3">
+                <i class="material-icons prefix">person_pin</i>
+                <input id="account_amountR" type="number" name="account_amountR" max="9999.99" min="0.01" class="validate" oncopy="return false" oncut="return false" onpaste="return false" required/>
+                <label for="account_amountR">Amonut Number To Transfer</label>
+            </div>
+            <div class="col s6 center-align">
+                <a type="submit" onclick="TransactionsOperations()" class="btn waves-effect blue tooltipped" data-tooltip="OK"><i class="material-icons">send</i></a>
+                <br>
+                <a href=""></a>
+            </div>
+            <div class="col s6 center-align">
+                <a type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Generate PDF"><i class="material-icons">picture_as_pdf</i></a>
+                <br>
+                <a href=""></a>
             </div>
 
         </div>
@@ -148,6 +160,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 <script type="text/javascript" src="JS/init.js"></script>
-<script type="text/javascript" src="JS/your_balance.js"></script>
+<script type="text/javascript" src="JS/retirement.js"></script>
 </body>
 </html>
