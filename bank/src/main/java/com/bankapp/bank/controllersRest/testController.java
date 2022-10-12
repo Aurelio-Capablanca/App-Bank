@@ -17,14 +17,14 @@ public class testController {
     @Autowired
     private ClientsServiceImp clientsServiceImp;
 
-    @GetMapping("/cliii/{id}")
+    @GetMapping("/clientss/{id}")
     Optional<Clients> one(@PathVariable Long id) {
 
         return repo.findById(id);
 
     }
 
-    @PutMapping("/cliii/{id}")
+    @PutMapping("/clients/{id}")
     Clients replaceClients(@RequestBody Clients newEmployee, @PathVariable Long id) {
 
         return repo.findById(id)
@@ -43,7 +43,4 @@ public class testController {
                     return repo.save(newEmployee);
                 });
     }
-
-
-
 }
