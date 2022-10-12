@@ -63,7 +63,10 @@
             <!-- Formulario para crear o actualizar un registro -->
             <form method="post" id="profile-form">
                 <!-- Campo oculto para asignar el id del registro al momento de modificar -->
+
+                <input class="" type="text" id="lblId" name="id_client"/>
                 <input class="" type="text" id="id_user" name="id_user"/>
+
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_box</i>
@@ -98,7 +101,7 @@
                     <div>
                         <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons center-align">cancel</i></a>
                             <!--boton save-->
-                        <a  type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></a>
+                        <a onclick="execute()" type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons center-align">save</i></a>
                     </div>
                 </div>
             </form>

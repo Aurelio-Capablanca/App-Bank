@@ -1,14 +1,12 @@
 package com.bankapp.bank.Models;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "clients")
+@NoArgsConstructor
 public class Clients {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +54,18 @@ public class Clients {
     @Setter
     @Column(name = "id_statusclient")
     private int id_statusclient;
+
+
+    public Clients(String name_client, String surname_client, String phone_client, String email_client, String dni_client, String user_client,int id_statusclient) {
+        this.name_client = name_client;
+        this.surname_client = surname_client;
+        this.phone_client = phone_client;
+        this.email_client = email_client;
+        this.dni_client = dni_client;
+        this.user_client = user_client;
+        this.id_statusclient = id_statusclient;
+    }
+
 
 
 }

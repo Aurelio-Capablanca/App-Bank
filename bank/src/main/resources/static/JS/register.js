@@ -14,9 +14,6 @@ async function addUsers(){
       datee.password_client = document.getElementById('txtPassword').value;
       datee.id_statusclient = 1;
 
-
-
-
       let repetirContraseña = document.getElementById('txtPassword2').value;
       if(repetirContraseña != datee.password_client){
             alert('La contraseña es diferente');
