@@ -193,3 +193,7 @@ delete from account where id_account between 2 and 5
   update account set balance_account = 500.99 where id_account =6
   update account set balance_account = 300.99 where id_account =7
 
+
+  select * from clients where user_client like '%arwen%'
+  select * from clients where user_client like '%josue%'
+  
