@@ -8,7 +8,7 @@ async function searchNumber() {
   data.number_account = document.getElementById('account_number_transfer').value;
   let operation = "Destination";
 
-  const request = await fetch('api/accounts_number_balance/' + operation, {
+  const request = await fetch('api/account_destination', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

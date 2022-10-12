@@ -27,6 +27,11 @@ public class AccountServiceImp implements AccountsService {
   }
 
   @Override
+  public BigDecimal returnBalanceDestination(String number){
+    return repo.findBalanceByNumberAccount(number);
+  }
+
+  @Override
   public Account getNumberAccount(Account account) {
     String query = "FROM Account WHERE number_account = :number_account";
     List<Account> list = entityManager.createQuery(query)
@@ -37,7 +42,6 @@ public class AccountServiceImp implements AccountsService {
       return null;
     }
     System.out.println(list.get(0));
-    //System.out.println(account.getNumber_account());
     return list.get(0);
   }
 
@@ -53,5 +57,6 @@ public class AccountServiceImp implements AccountsService {
     BigDecimal balance = list.get(0);
     return balance;
   }
+
 
 }

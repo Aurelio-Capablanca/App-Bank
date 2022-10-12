@@ -14,7 +14,4 @@ public class TransactionHelper {
   @Setter @Getter
   private static double total_transactions;
 
-  @Setter @Getter
-  private String operation;
-
 }

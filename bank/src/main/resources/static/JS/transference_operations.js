@@ -5,7 +5,10 @@ $(document).ready(function() {
 
 async function TransactionsOperations(){
  CreateTransaction();
+ UpdateDestAccount();
+ UpdateSentAccount();
 }
+
 
 async function CreateTransaction(){
       let data = {};
@@ -24,15 +27,28 @@ async function CreateTransaction(){
 }
 
 
-async function registerTransaction(){
+async function UpdateSentAccount(){
       let data = {};
-      data.number_account = document.getElementById('txtNumber').value;
-      data.balance_account = document.getElementById('txtbalance').value;
-      data.id_typeaccount = 1;
-      data.id_statusaccount = 1 ;
+      data.number_account = localStorage.DestinationAccount;
+      let number = localStorage.SendAccount.DestinationAccount;
 
-        const request = await fetch('api/account', {
-            method: 'POST',
+       const request = await fetch('api/accountUpDest/'+ number, {
+            method: 'PUT',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+      });
+}
+
+async function UpdateDestAccount(){
+      let data = {};
+      data.number_account = localStorage.SendAccount;
+      let number = localStorage.SendAccount;
+
+        const request = await fetch('api/accountUpDest/'+ number, {
+            method: 'PUT',
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
