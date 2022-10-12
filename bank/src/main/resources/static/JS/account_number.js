@@ -18,7 +18,6 @@ async function searchNumber() {
   });
 
   const answer = await request.text();
-  alert(answer)
   if (answer != 'FAIL') {
    localStorage.DestinationAccount = data.number_account;
    alert(localStorage.DestinationAccount)

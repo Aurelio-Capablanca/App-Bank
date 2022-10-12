@@ -185,7 +185,9 @@ update account set balance_account = ? where number_account = ?
 update banks set id_account = 6
 delete from account where id_account between 2 and 5
 
-  SELECT balance_account FROM account  WHERE  number_account ="12345678-9"
+  SELECT concat(balance_account," USD $") as Balance  FROM account  WHERE  number_account ="SV55DAV333333335466565656565"
+  SELECT concat(balance_account," USD $") as Balance  FROM account  WHERE  number_account =
+  
   select * from transactions t 
   select * from account a 
   update account set balance_account = 500.99 where id_account =6
