@@ -51,14 +51,10 @@ public class AccountController  {
     return "FAIL";
   }
 
-  @RequestMapping(value = "api/accountAskBalance/{number}", method = RequestMethod.GET)
+  @RequestMapping(value = "api/accountAskBalance/{number}", method = RequestMethod.POST)
   public BigDecimal AskYourBalance(@PathVariable String number, @RequestBody Account account){
-    BigDecimal BalanceAccount = AccountServiceImp.findBalanceOfAccount(number);
-    if(BalanceAccount != null){
-      account.setBalance_account(BalanceAccount.doubleValue());
-      return BalanceAccount ;
-    }
-    return null;
+    account.setNumber_account(number);
+    return AccountServiceImp.findBalanceOfAccount(account.getNumber_account());
   }
 
   @RequestMapping(value = "api/accounts_number_balance/{operation}", method = RequestMethod.POST)
