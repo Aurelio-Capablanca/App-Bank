@@ -15,6 +15,9 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
   @Query(value = "SELECT balance_account FROM account WHERE number_account =:number", nativeQuery = true )
   public BigDecimal findBalanceByNumberAccount(@Param("number") String number);
 
+  @Query(value = "SELECT concat(balance_account,\" USD $\") as Balance  FROM account  WHERE  number_account =:number", nativeQuery = true )
+  public BigDecimal findBalanceOfAccount(@Param("number") String number);
+
   @Transactional
   @Modifying
   @Query (value = "UPDATE account set balance_account =:balanceTransaction where number_account =:number", nativeQuery = true)

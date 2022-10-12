@@ -51,8 +51,18 @@ public class AccountController  {
     return "FAIL";
   }
 
+  @RequestMapping(value = "api/accountAskBalance/{number}", method = RequestMethod.GET)
+  public BigDecimal AskYourBalance(@PathVariable String number, @RequestBody Account account){
+    BigDecimal BalanceAccount = AccountServiceImp.findBalanceOfAccount(number);
+    if(BalanceAccount != null){
+      account.setBalance_account(BalanceAccount.doubleValue());
+      return BalanceAccount ;
+    }
+    return null;
+  }
+
   @RequestMapping(value = "api/accounts_number_balance/{operation}", method = RequestMethod.POST)
-  public String ReadAccountNumbers(@PathVariable String operation,@RequestBody Account account) {
+  public String ReadAccountNumbers(@PathVariable String operation, @RequestBody Account account) {
     BigDecimal searchNumber = AccountServiceImp.getNumberBalanceAccount(account);
     if (searchNumber != null) {
       TransactionHelper th = new TransactionHelper();

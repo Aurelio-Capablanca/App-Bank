@@ -9,9 +9,9 @@ public interface AccountsService {
 
   void create (Account account);
 
-
   BigDecimal returnBalanceDestination(String number);
 
+  BigDecimal findBalanceOfAccount(String number);
 
   Account getNumberAccount(Account account);
 

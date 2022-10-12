@@ -32,6 +32,11 @@ public class AccountServiceImp implements AccountsService {
   }
 
   @Override
+  public BigDecimal findBalanceOfAccount(String number){
+    return repo.findBalanceOfAccount(number);
+  }
+
+  @Override
   public Account getNumberAccount(Account account) {
     String query = "FROM Account WHERE number_account = :number_account";
     List<Account> list = entityManager.createQuery(query)
